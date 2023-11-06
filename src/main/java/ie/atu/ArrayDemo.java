@@ -12,10 +12,20 @@ public class ArrayDemo {
             anArray[i] = 100*(i+1);
         }
 
-        for(i=0;i<10;i++){
-            System.out.println("Element at index "+ i + " is " + anArray[i]);
+        for(int  value : anArray){
+            System.out.println("Element at index "+ i + " is " + value);
+            value++;
         }
 
-        System.out.println("Enter a new number: ");
+        try
+        {
+            System.out.println("Enter a new number: ");
+            anArray[10] = scanner.nextInt();
+
+        }
+        catch(Exception e){
+            System.out.println("Exceeds array size");
+        }
+
     }
 }
